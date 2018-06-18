@@ -1,0 +1,20 @@
+python train.py \
+-word-vectors /media/iscas/linux/fym/word2vec/penny.cbow.dim300.bin \
+-epoch 10 \
+-batch 100 \
+-device 0 \
+-pos-vec-size 5 \
+-ner-vec-size 5 \
+-hidden-size 128 \
+-optimizer Adamax \
+-lr 0.0005 \
+-num-layers 3 \
+-dropout 0.1 \
+-brnn \
+-rnn-type LSTM \
+-multi-layer last \
+-exp-name feature_cc_lr_finetune \
+-baidu-data /media/iscas/linux/fym/data/train_data_sogou/baidu_data.pt \
+-train-data /media/iscas/linux/fym/data/train_data_sogou/train_factoid_sogou_2.pt \
+-valid-data /media/iscas/linux/fym/data/train_data_sogou/valid.pt \
+-dict=/media/iscas/linux/fym/data/train_data_sogou/vocab.pt
